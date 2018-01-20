@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import VotesBox from './VotesBox';
-import AnswersBox from './AnswersBox';
-import ViewsBox from './ViewsBox';
+import CounterBox from './CounterBox';
 import QuestionTitle from './QuestionTitle';
-import FlexRowContainer from './FlexRowContainer';
-import FlexColumnContainer from './FlexColumnContainer';
+import FlexRowContainer from '../common/FlexRowContainer';
+import FlexColumnContainer from '../common/FlexColumnContainer';
 import Button from 'material-ui/Button';
 import styled from 'styled-components';
 
 const QuestionRow = ({ question, className }) => {
   return (
-    <FlexRowContainer>
+    <FlexRowContainer className={className}>
       <FlexRowContainer>
-        <VotesBox votes={0}> </VotesBox>
-        <AnswersBox answers={0}> </AnswersBox>
-        <ViewsBox views={0}> </ViewsBox>
+        <CounterBox count={0} name="votes" />
+        <CounterBox count={0} name="answers" />
+        <CounterBox count={0} name="views" />
       </FlexRowContainer>
       <FlexColumnContainer>
         <QuestionTitle> {question} </QuestionTitle>
@@ -30,4 +28,6 @@ const QuestionRow = ({ question, className }) => {
   )
 };
 
-export default QuestionRow
+export default styled(QuestionRow)`
+  margin: 25px 0px;
+`

@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-const AnswersBox = ({ answers, className }) => {
+const CounterBox = ({ name, count, className }) => {
   return (
     <div className={className}>
       <div class="mini-counts">
-        <span>{answers}</span>
+        <span>{count}</span>
       </div>
-      <div>answers</div>
+      <div>{name}</div>
     </div>
   )
 };
 
-export default styled(AnswersBox)`
+export default styled(CounterBox)`
   margin: 5px;
   padding: 5px;
+  border: 2px solid;
 `
