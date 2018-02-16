@@ -3,7 +3,6 @@ import VotingSideBar from './VotingSideBar';
 import QuestionText from './QuestionText';
 import FlexRowContainer from '../common/FlexRowContainer';
 import FlexColumnContainer from '../common/FlexColumnContainer';
-import Button from 'material-ui/Button';
 import styled from 'styled-components';
 
 const Question = ({ text, numberOfVotes, className }) => {
